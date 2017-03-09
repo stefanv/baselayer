@@ -12,7 +12,9 @@ def make_app():
     """
     settings = {
         'static_path': '../public',
-        'autoreload': '--debug' in sys.argv
+        'autoreload': '--debug' in sys.argv,
+        'xsrf_cookies': True,
+        'login_url': '/login'
         }
 
     handlers = [
